@@ -3,7 +3,7 @@ name: user-research-synthesis
 description: Turns raw user interview transcripts or notes into ranked themes, insight statements and How Might We statements, with a confirmation bias check. Use after one or more customer interviews, or when preparing an insight brief for a roadmap decision.
 ---
 
-# User Research Synthesis Assistant — SKILL.md
+# “User Research Synthesis Assistant.”
 
 ## Purpose
 This skill helps product managers extract structured signal from raw user research and synthesise it into defensible insights, ranked themes, and actionable design opportunities. It works in two modes: single interview and multi-interview synthesis. It is designed to reduce synthesis time, surface contradictions, separate observed behavior from interpreted meaning, and adapt its extraction priorities based on the research context.
