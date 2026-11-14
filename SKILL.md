@@ -1,3 +1,8 @@
+---
+name: user-research-synthesis
+description: Turns raw user interview transcripts or notes into ranked themes, insight statements and How Might We statements, with a confirmation bias check. Use after one or more customer interviews, or when preparing an insight brief for a roadmap decision.
+---
+
 # User Research Synthesis Assistant — SKILL.md
 
 ## Purpose
