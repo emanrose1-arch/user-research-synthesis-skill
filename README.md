@@ -6,7 +6,7 @@ A Claude skill that helps product managers extract structured signal from raw us
 
 ## The Problem
 
-Most PM synthesis is fast and biased. You finish 8 interviews, spend an afternoon in a doc, and produce an insight brief that largely reflects the hypotheses you walked in with. The quotes that confirmed your thinking made it in. The contradictions got smoothed over. The emotional signals — the resignation in someone's voice when they described their workaround — never made it to paper.
+Most PM synthesis is fast and biased. You finish 8 interviews, spend an afternoon in a doc, and produce an insight brief that largely reflects the hypotheses you walked in with. The quotes that confirmed your thinking made it in. The contradictions got smoothed over. The emotional signals never made it to paper, like the resignation in someone's voice when they described their workaround.
 
 Worse: a theme that appeared in 2 of 8 interviews gets equal weight to one that appeared in 7, because there's no structured way to track cross-interview frequency when you're working manually.
 
@@ -19,7 +19,7 @@ This skill is designed to fix both problems.
 The skill runs across four phases with explicit checkpoints between each.
 
 **Step 0: Mode Selection**
-Single interview or multi-interview. Multi-interview mode runs Phase 1 extraction on each interview separately before any cross-interview synthesis begins. Themes are then weighted by how many distinct interviews they appear in — a theme from 7 of 8 interviews is structurally different from one that appears in 2.
+Single interview or multi-interview. Multi-interview mode runs Phase 1 extraction on each interview separately before any cross-interview synthesis begins. Themes are then weighted by how many distinct interviews they appear in. A theme from 7 of 8 interviews is structurally different from one that appears in 2.
 
 **Phase 0: Context + Calibration**
 Four calibrating questions before any transcript is touched: research objective, user segment, product stage, and existing hypotheses. Based on the answers, the skill runs a calibration step that explicitly states which extraction dimensions it will prioritise and why.
@@ -45,7 +45,7 @@ The PM reviews and confirms or corrects Phase 1 before synthesis runs. In multi-
 **Phase 2: Synthesis**
 Runs only on confirmed extraction. Produces:
 
-- Themes ranked by evidence frequency and severity. In multi-interview mode, each theme shows interview coverage (e.g. "6 of 8 interviews — Strong signal").
+- Themes ranked by evidence frequency and severity. In multi-interview mode, each theme shows interview coverage (e.g. "6 of 8 interviews : Strong signal").
 - Insight statements in a strict three-part structure: "Users [X] because [Y], which means [Z]."
 - How Might We statements framed as design opportunities.
 - Theme Type Classification — what the research actually tells you about the nature of the change needed: product change, positioning change, process change, or strategic question. No effort estimation. Only what the research can answer.
@@ -56,15 +56,15 @@ Runs only on confirmed extraction. Produces:
 
 ## Why Theme Type Classification Instead of Impact vs Effort
 
-Most synthesis tools try to estimate effort. Claude has no basis for that — it doesn't know your team size, tech stack, or quarterly capacity. Effort estimates from a synthesis tool are noise.
+Most synthesis tools try to estimate effort. Claude has no basis for that. it doesn't know your team size, tech stack, or quarterly capacity. Effort estimates from a synthesis tool are noise.
 
 What research can tell you is the type of change a theme demands. A theme pointing to a positioning change needs a different conversation than one pointing to a product change — even if both are "high severity." Getting that classification right before walking into a roadmap meeting is worth more than a guess at effort.
 
 ---
 
-## Why the Three-Phase Design with Checkpoints
+## Why the Phased Design with Checkpoints
 
-Single-pass synthesis tools produce outputs that feel structured but aren't trustworthy — extraction and interpretation happen simultaneously, with no checkpoint for the PM to catch errors. The three-phase design forces a separation between observation and interpretation that mirrors how rigorous researchers actually work.
+Single-pass synthesis tools produce outputs that feel structured but aren't trustworthy. extraction and interpretation happen simultaneously, with no checkpoint for the PM to catch errors. The three-phase design forces a separation between observation and interpretation that mirrors how rigorous researchers actually work.
 
 The confirmation bias check exists because the most dangerous insight brief is one that's well-formatted and wrong.
 
@@ -84,7 +84,7 @@ The confirmation bias check exists because the most dangerous insight brief is o
 - Conduct interviews or generate interview questions
 - Estimate engineering effort or team capacity
 - Produce quantitative claims or statistical significance
-- Replace researcher judgment — it structures and surfaces, not decides
+- Replace researcher judgment. it structures and surfaces, not decides
 
 ---
 
